@@ -5,10 +5,14 @@ export const metadata = {
   description: "A Next.js app with Tailwind CSS",
 };
 
-export default function RootLayout({ children }) {
+export default function DashboardLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* Layout UI */}
+        {/* Place children where you want to render a page or nested layout */}
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
