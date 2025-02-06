@@ -9,10 +9,30 @@ const blogPosts = {
     title: "Tailwind CSS Best Practices",
     content: "Optimize your Tailwind CSS workflow with these best practices.",
   },
+  "react-performance-optimization": {
+    title: "React Performance Optimization",
+    content:
+      "Tips and tricks to optimize the performance of your React applications.",
+  },
+  "javascript-closures": {
+    title: "Understanding JavaScript Closures",
+    content:
+      "A deep dive into JavaScript closures and how to use them effectively.",
+  },
+  "css-grid-layout": {
+    title: "CSS Grid Layout Tutorial",
+    content: "Learn how to create complex layouts easily with CSS Grid.",
+  },
+  "typescript-for-beginners": {
+    title: "TypeScript for Beginners",
+    content:
+      "An introduction to TypeScript for developers new to the language.",
+  },
 };
 
-export default function BlogPost({ params }) {
+const BlogPost = ({ params }) => {
   const post = blogPosts[params.slug];
+  console.log(post);
 
   if (!post) {
     return <NotFound />;
@@ -24,4 +44,6 @@ export default function BlogPost({ params }) {
       <p className="mt-4 text-lg">{post.content}</p>
     </main>
   );
-}
+};
+
+export default BlogPost;
